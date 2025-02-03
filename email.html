@@ -133,10 +133,10 @@
     
     .btn a {
       background-color: #ffffff;
-      border: solid 2px #0867ec;
+      border: solid 2px #6941c6;
       border-radius: 4px;
       box-sizing: border-box;
-      color: #0867ec;
+      color: #6941c6;
       cursor: pointer;
       display: inline-block;
       font-size: 16px;
@@ -148,22 +148,22 @@
     }
     
     .btn-primary table td {
-      background-color: #0867ec;
+      background-color: #6941c6;
     }
     
     .btn-primary a {
-      background-color: #0867ec;
-      border-color: #0867ec;
+      background-color: #723ced;
+      border-color: #723ced;
       color: #ffffff;
     }
     
     @media all {
       .btn-primary table td:hover {
-        background-color: #ec0867 !important;
+        background-color: #6941c6 !important;
       }
       .btn-primary a:hover {
-        background-color: #ec0867 !important;
-        border-color: #ec0867 !important;
+        background-color: #6941c6 !important;
+        border-color: #6941c6 !important;
       }
     }
     
@@ -192,7 +192,7 @@
     }
     
     .text-link {
-      color: #0867ec !important;
+      color: #6941c6 !important;
       text-decoration: underline !important;
     }
     
@@ -310,8 +310,10 @@
               <!-- START MAIN CONTENT AREA -->
               <tr>
                 <td class="wrapper">
-                  <p>Hi there</p>
-                  <p>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
+                  <p>Hi ${first_name}</p>
+                  <p>${intro}</p>
+                  <img src="${banner_image}" alt="Pharma Flo Image" width="100%" style="max-width: 560px; display: block; margin: 16px auto; border-radius: 8px;">
+                  <p>${body}</p>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                     <tbody>
                       <tr>
@@ -319,7 +321,7 @@
                           <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                               <tr>
-                                <td> <a href="http://htmlemail.io" target="_blank">Call To Action</a> </td>
+                                <td> <a href="${cta_link}" target="_blank">${cta_text}</a> </td>
                               </tr>
                             </tbody>
                           </table>
@@ -340,13 +342,8 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link">Company Inc, 7-11 Commercial Ct, Belfast BT1 2NB</span>
-                    <br> Don't like these emails? <a href="http://htmlemail.io/blog">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail.io</a>
+                    <span class="apple-link">Pharma Flo Limited, London</span>
+                    <br> Don't like these emails? <a href="${cta_link}">Unsubscribe</a>.
                   </td>
                 </tr>
               </table>
